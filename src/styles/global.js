@@ -21,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
     color: var(--light-grey);
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-y: ${props => (props.hideOverflowY ? "hidden" : "visible")};
   }
 
   a {

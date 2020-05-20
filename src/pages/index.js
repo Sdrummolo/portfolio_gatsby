@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import SEO from "../components/utilities/seo"
+import GlobalStyle from "../styles/global"
 
 // Components
 import Layout from "../components/layout/layout"
@@ -11,17 +12,24 @@ import Header from "../components/layout/Header"
 import About from "../components/layout/About"
 import Portfolio from "../components/layout/Portfolio"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Navbar />
-    <BackgroundLogo />
-    <Container>
-      <Header />
-      <About />
-      <Portfolio />
-    </Container>
-  </Layout>
-)
+const IndexPage = () => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false)
+
+  const handleOpenBurger = () => setIsBurgerOpen(isBurgerOpen => !isBurgerOpen)
+
+  return (
+    <>
+      <GlobalStyle hideOverflowY={isBurgerOpen} />
+      <SEO title="Home" />
+      <Navbar handleOpenBurger={handleOpenBurger} isBurgerOpen={isBurgerOpen} />
+      <BackgroundLogo />
+      <Container>
+        <Header />
+        <About />
+        <Portfolio />
+      </Container>
+    </>
+  )
+}
 
 export default IndexPage

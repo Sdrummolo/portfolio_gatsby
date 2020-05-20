@@ -3,7 +3,10 @@ import styled from "styled-components"
 import logo from "../../images/dp_lighblue_textright_sm.png"
 
 const StyledLogo = styled.img`
-  max-width: 155px;
+  position: fixed;
+  top: 15px;
+  max-height: 50px;
+  z-index: 200;
 `
 
 const NavLogo = () => {

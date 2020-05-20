@@ -15,13 +15,13 @@ const UL = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    height: 100vh;
     padding-top: 320px;
     background-color: var(--white);
-    width: ${({ isOpen }) => (isOpen ? "100%" : 0)};
+    width: ${({ isBurgerOpen }) => (isBurgerOpen ? "100%" : 0)};
 
     li {
       margin: 20px auto;
@@ -29,9 +29,9 @@ const UL = styled.ul`
   }
 `
 
-const RightNav = ({ isOpen }) => {
+const RightNav = ({ isBurgerOpen }) => {
   return (
-    <UL isOpen={isOpen}>
+    <UL isBurgerOpen={isBurgerOpen}>
       <li>
         <Link>About me</Link>
       </li>

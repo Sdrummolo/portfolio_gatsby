@@ -27,20 +27,22 @@ const StyledBurger = styled.div`
     transition: all 0.2s linear;
 
     :nth-child(1) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ isBurgerOpen }) =>
+        isBurgerOpen ? "rotate(45deg)" : "rotate(0)"};
     }
     :nth-child(2) {
-      opacity: ${({ isOpen }) => (isOpen ? 0 : 1)};
+      opacity: ${({ isBurgerOpen }) => (isBurgerOpen ? 0 : 1)};
     }
     :nth-child(3) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ isBurgerOpen }) =>
+        isBurgerOpen ? "rotate(-45deg)" : "rotate(0)"};
     }
   }
 `
 
-const Burger = ({ isOpen, handleOpenBurger }) => {
+const Burger = ({ isBurgerOpen, handleOpenBurger }) => {
   return (
-    <StyledBurger onClick={handleOpenBurger} isOpen={isOpen}>
+    <StyledBurger onClick={handleOpenBurger} isBurgerOpen={isBurgerOpen}>
       <div></div>
       <div></div>
       <div></div>
@@ -50,7 +52,7 @@ const Burger = ({ isOpen, handleOpenBurger }) => {
 
 Burger.propTypes = {
   handleOpenBurger: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool.isRequired,
+  isBurgerOpen: PropTypes.bool.isRequired,
 }
 
 export default Burger
