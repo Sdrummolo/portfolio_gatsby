@@ -32,7 +32,7 @@ const ResumeContainer = styled.div`
 
 const About = () => {
   return (
-    <SectionContainer centerText>
+    <SectionContainer centerText id="about">
       <SectionTitle>About me</SectionTitle>
       <SectionDescription>
         Let me <Bold>introduce myself</Bold>

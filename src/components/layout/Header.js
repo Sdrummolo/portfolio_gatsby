@@ -82,10 +82,12 @@ const Header = () => {
       <HeaderH3>
         A <Bold>passionate</Bold> web developer
       </HeaderH3>
-      <Link>
+      <Link to="#about">
         <Button main>About Me</Button>
       </Link>
-      <ArrowDown src={arrowDown} alt="Arrow down" />
+      <Link to="#about">
+        <ArrowDown src={arrowDown} alt="Arrow down" />
+      </Link>
     </HeaderContainer>
   )
 }

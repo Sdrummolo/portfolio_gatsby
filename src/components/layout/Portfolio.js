@@ -35,7 +35,7 @@ const Portfolio = () => {
   const projects = data.allProjectsJson.edges
 
   return (
-    <SectionContainer centerText>
+    <SectionContainer centerText id="portfolio">
       <SectionTitle>Portfolio</SectionTitle>
       <SectionDescription>
         Some of my recent <Bold>work</Bold>

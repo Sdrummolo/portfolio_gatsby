@@ -26,7 +26,7 @@ const LogoContainer = styled.div`
 
 const Contact = () => {
   return (
-    <SectionContainer centerText>
+    <SectionContainer centerText id="contact">
       <SectionTitle>Contact Me</SectionTitle>
       <SectionDescription>
         If you want to <Bold>start a project</Bold> with me, or talk about a
