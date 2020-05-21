@@ -13,7 +13,6 @@ const HeaderContainer = styled.div`
   padding: 0 5rem;
 
   @media (max-width: 768px) {
-    height: 80vh;
     padding: 1rem;
   }
 `
@@ -53,6 +52,10 @@ const ArrowDown = styled.img`
   left: 50%;
   margin-left: -11px;
   cursor: pointer;
+
+  @media (max-width: 576px) {
+    bottom: 100px;
+  }
 `
 
 const Header = () => {
