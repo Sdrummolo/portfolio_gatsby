@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, html {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     color: var(--light-grey);

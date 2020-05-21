@@ -13,7 +13,7 @@ const HeaderContainer = styled.div`
 `
 
 const HeaderH1 = styled.h1`
-  font-size: 3.3rem;
+  font-size: 3.5rem;
   font-weight: 300;
   padding-top: 320px;
 `
@@ -43,7 +43,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderH1>
-        Hi!{" "}
+        Hi!
         <span role="img" aria-label="Cool emoji">
           ✌️
         </span>

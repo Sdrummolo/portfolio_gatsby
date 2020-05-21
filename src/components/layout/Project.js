@@ -12,7 +12,6 @@ const Title = styled.h2`
   text-align: center;
   margin-top: 70px;
   margin-bottom: 30px;
-  border-bottom: 4px solid var(--main);
   display: inline-block;
 `
 

@@ -9,6 +9,7 @@ import BackgroundLogo from "../components/UI/BackgroundLogo"
 import Header from "../components/layout/Header"
 import About from "../components/layout/About"
 import Portfolio from "../components/layout/Portfolio"
+import Contact from "../components/layout/Contact"
 
 const IndexPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,6 +26,7 @@ const IndexPage = () => {
         <Header />
         <About />
         <Portfolio />
+        <Contact />
       </Container>
     </>
   )
