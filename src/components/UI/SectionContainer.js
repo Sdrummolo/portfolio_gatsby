@@ -5,6 +5,6 @@ export default styled.div`
   text-align: ${props => (props.centerText ? "center" : "none")};
 
   @media (max-width: 768px) {
-    margin-top: 4rem;
+    margin-top: 7rem;
   }
 `
