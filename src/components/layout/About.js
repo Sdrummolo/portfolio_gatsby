@@ -6,6 +6,7 @@ import SectionContainer from "../UI/SectionContainer"
 import SectionTitle from "../UI/SectionTitle"
 import SectionDescription from "../UI/SectionDescription"
 import Bold from "../UI/Bold"
+import Button from "../UI/Button"
 
 const AboutText = styled.p`
   margin: 40px 0;
@@ -16,8 +17,11 @@ const Stack = styled.h4`
   font-weight: 700;
   text-transform: uppercase;
   color: var(--main);
-  margin: 40px 0;
+  margin-bottom: 35px;
   line-height: 1.8rem;
+`
+const ResumeContainer = styled.div`
+  font-size: 0.8rem;
 `
 
 const About = () => {
@@ -42,6 +46,9 @@ const About = () => {
         HTML5, CSS3, JAVASCRIPT, SASS, REACT, CONTEXT API, CSS MODULES, STYLED
         COMPONENTS, GATSBY, GRAPHQL, NPM, PYTHON, FLASK
       </Stack>
+      <ResumeContainer>
+        <Button main>Portfolio</Button>
+      </ResumeContainer>
     </SectionContainer>
   )
 }

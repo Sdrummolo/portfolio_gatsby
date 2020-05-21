@@ -3,7 +3,7 @@ import styled from "styled-components"
 import arrowDown from "../../images/arrow_down.svg"
 
 // Components
-import HeaderButton from "../UI/HeaderButton"
+import Button from "../UI/Button"
 import Bold from "../UI/Bold"
 import { Link } from "gatsby"
 
@@ -20,6 +20,7 @@ const HeaderH1 = styled.h1`
 
 const HeaderH3 = styled.h3`
   margin-top: 20px;
+  margin-bottom: 60px;
   font-size: 1.3rem;
   font-weight: 400;
 `
@@ -27,11 +28,6 @@ const HeaderH3 = styled.h3`
 const NameSpan = styled.span`
   font-weight: 600;
   color: var(--main);
-`
-
-const AdjectiveSpan = styled.span`
-  font-weight: 600;
-  color: var(--dark-grey);
 `
 
 const ArrowDown = styled.img`
@@ -47,13 +43,17 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderH1>
-        Hi! ✌️, <br />I am <NameSpan>Luigi</NameSpan>
+        Hi!{" "}
+        <span role="img" aria-label="Cool emoji">
+          ✌️
+        </span>
+        , <br />I am <NameSpan>Luigi</NameSpan>
       </HeaderH1>
       <HeaderH3>
         A <Bold>passionate</Bold> web developer
       </HeaderH3>
       <Link>
-        <HeaderButton />
+        <Button main>About Me</Button>
       </Link>
       <ArrowDown src={arrowDown} alt="Arrow down" />
     </HeaderContainer>

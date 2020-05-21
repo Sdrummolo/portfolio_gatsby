@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Tweeetter",
+    "description": "Social media Web App built with React.",
+    "image": "../images/tweeetter.png",
+    "technologies": "Css3, React",
+    "siteUrl": "https://sdrummolo.github.io/tweeetter/",
+    "repoUrl": "https://github.com/Sdrummolo/tweeetter"
+  },
+  {
+    "title": "E-Buy",
+    "description": "Social media Web App built with React.",
+    "image": "../images/ebuy.png",
+    "technologies": "Css3, React",
+    "siteUrl": "https://sdrummolo.github.io/ebuy/",
+    "repoUrl": "https://github.com/Sdrummolo/ebuy"
+  }
+]

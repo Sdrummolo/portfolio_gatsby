@@ -8,8 +8,8 @@ import Burger from "./Burger"
 import RightNav from "./RightNav"
 
 const NavBar = styled.nav`
-  background-color: ${({ isBurgerOpen }) =>
-    isBurgerOpen ? "white" : "rgba(255, 255, 255, 0.9)"};
+  background-color: ${({ isMenuOpen }) =>
+    isMenuOpen ? "white" : "rgba(255, 255, 255, 0.9)"};
   box-shadow: 0 5px 20px rgba(98, 98, 98, 0.15);
   position: fixed;
   top: 0;
@@ -30,18 +30,15 @@ const NavBar = styled.nav`
   }
 `
 
-const Navbar = ({ handleOpenBurger, isBurgerOpen }) => {
+const Navbar = ({ handleOpenMenu, isMenuOpen }) => {
   return (
-    <NavBar isBurgerOpen={isBurgerOpen}>
+    <NavBar isMenuOpen={isMenuOpen}>
       <div className="container">
         <Link to="/">
           <NavLogo />
         </Link>
-        <Burger
-          handleOpenBurger={handleOpenBurger}
-          isBurgerOpen={isBurgerOpen}
-        />
-        <RightNav isBurgerOpen={isBurgerOpen} />
+        <Burger handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
+        <RightNav isMenuOpen={isMenuOpen} />
       </div>
     </NavBar>
   )

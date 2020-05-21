@@ -21,7 +21,7 @@ const UL = styled.ul`
     height: 100vh;
     padding-top: 320px;
     background-color: var(--white);
-    width: ${({ isBurgerOpen }) => (isBurgerOpen ? "100%" : 0)};
+    width: ${({ isMenuOpen }) => (isMenuOpen ? "100%" : 0)};
 
     li {
       margin: 20px auto;
@@ -29,9 +29,9 @@ const UL = styled.ul`
   }
 `
 
-const RightNav = ({ isBurgerOpen }) => {
+const RightNav = ({ isMenuOpen }) => {
   return (
-    <UL isBurgerOpen={isBurgerOpen}>
+    <UL isMenuOpen={isMenuOpen}>
       <li>
         <Link>About me</Link>
       </li>
