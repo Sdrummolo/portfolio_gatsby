@@ -16,6 +16,10 @@ const HeaderH1 = styled.h1`
   font-size: 3.5rem;
   font-weight: 300;
   padding-top: 320px;
+
+  @media (max-width: 768px) {
+    font-size: 2.8rem;
+  }
 `
 
 const HeaderH3 = styled.h3`

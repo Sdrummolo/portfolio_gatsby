@@ -3,7 +3,7 @@ import styled from "styled-components"
 import logoLarge from "../../images/dp_blue_lg.png"
 
 const StyledLogo = styled.img`
-  max-width: 100%;
+  max-width: 70%;
   max-height: 90vh;
   transform: rotate(-45deg);
   position: absolute;
@@ -16,6 +16,11 @@ const StyledLogo = styled.img`
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+
+  @media (max-width: 576px) {
+    max-width: 90%;
+    top: 0;
+  }
 `
 
 const BackgroundLogo = () => {
