@@ -15,17 +15,17 @@ const HeaderContainer = styled.div`
 const HeaderH1 = styled.h1`
   font-size: 3.5rem;
   font-weight: 300;
-  padding-top: 320px;
+  padding-top: 20rem;
 
   @media (max-width: 768px) {
-    /* padding-top: 270px; */
+    padding-top: 18rem;
     font-size: 2.8rem;
   }
 `
 
 const HeaderH3 = styled.h3`
-  margin-top: 20px;
-  margin-bottom: 60px;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
   font-size: 1.3rem;
   font-weight: 400;
 
