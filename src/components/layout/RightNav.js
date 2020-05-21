@@ -19,7 +19,7 @@ const UL = styled.ul`
     top: 0;
     right: 0;
     height: 100vh;
-    padding-top: 320px;
+    padding-top: 15rem;
     background-color: var(--white);
     width: ${({ isMenuOpen }) => (isMenuOpen ? "100%" : 0)};
 

@@ -26,11 +26,12 @@ const ProjectContainer = styled.div`
 
 const FlexItem = styled.div`
   width: 50%;
-  padding: 15px;
+  padding: 1rem;
   text-align: start;
 
   @media (max-width: 768px) {
     width: 100%;
+    text-align: center;
   }
 
   p {
@@ -56,6 +57,10 @@ const ButtonsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-top: 15px;
+
+  @media (max-width: 768px) {
+    justify-content: space-evenly;
+  }
 `
 
 const Project = ({ data, index }) => {

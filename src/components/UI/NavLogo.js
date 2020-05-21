@@ -7,6 +7,11 @@ const StyledLogo = styled.img`
   top: 15px;
   max-height: 50px;
   z-index: 200;
+
+  @media (max-width: 768px) {
+    max-height: 40px;
+    top: 10px;
+  }
 `
 
 const NavLogo = () => {

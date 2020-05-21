@@ -18,12 +18,16 @@ const NavBar = styled.nav`
   z-index: 100;
   height: 80px;
 
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+
   .container {
     position: relative;
     max-width: 1364px;
     margin: auto;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

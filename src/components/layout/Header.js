@@ -10,6 +10,11 @@ import { Link } from "gatsby"
 const HeaderContainer = styled.div`
   height: 100vh;
   position: relative;
+  padding: 0 5rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `
 
 const HeaderH1 = styled.h1`
@@ -18,7 +23,7 @@ const HeaderH1 = styled.h1`
   padding-top: 20rem;
 
   @media (max-width: 768px) {
-    padding-top: 18rem;
+    padding-top: 16rem;
     font-size: 2.8rem;
   }
 `
@@ -49,7 +54,7 @@ const ArrowDown = styled.img`
   cursor: pointer;
 
   @media (max-width: 576px) {
-    bottom: 80px;
+    bottom: 120px;
   }
 `
 
