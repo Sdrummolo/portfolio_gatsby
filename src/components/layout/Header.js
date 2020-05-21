@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
   }
 
   @media only screen and (min-device-width: 411px) and (max-device-width: 840px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-    height: 150vh;
+    height: 180vh;
   }
 `
 
