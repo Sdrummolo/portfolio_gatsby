@@ -71,7 +71,7 @@ const ArrowDown = styled.img`
 
 const Header = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer id="header">
       <HeaderH1>
         Hi
         <span role="img" aria-label="Cool emoji">

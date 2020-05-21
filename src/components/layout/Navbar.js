@@ -42,7 +42,7 @@ const Navbar = ({ handleOpenMenu, isMenuOpen }) => {
           <NavLogo />
         </Link>
         <Burger handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
-        <RightNav isMenuOpen={isMenuOpen} />
+        <RightNav isMenuOpen={isMenuOpen} handleOpenMenu={handleOpenMenu} />
       </div>
     </NavBar>
   )

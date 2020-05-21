@@ -29,17 +29,23 @@ const UL = styled.ul`
   }
 `
 
-const RightNav = ({ isMenuOpen }) => {
+const RightNav = ({ isMenuOpen, handleOpenMenu }) => {
   return (
     <UL isMenuOpen={isMenuOpen}>
       <li>
-        <Link to="#about">About me</Link>
+        <Link to="#about" onClick={handleOpenMenu}>
+          About me
+        </Link>
       </li>
       <li>
-        <Link to="#portfolio">Portfolio</Link>
+        <Link to="#portfolio" onClick={handleOpenMenu}>
+          Portfolio
+        </Link>
       </li>
       <li>
-        <Link to="#contact">Contact</Link>
+        <Link to="#contact" onClick={handleOpenMenu}>
+          Contact
+        </Link>
       </li>
     </UL>
   )

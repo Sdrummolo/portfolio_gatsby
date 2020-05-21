@@ -15,6 +15,7 @@ export default function Layout({ children }) {
     // eslint-disable-next-line global-require
     require("smooth-scroll")('a[href*="#"]')
   }
+
   return (
     <>
       <SEO title="Home" />

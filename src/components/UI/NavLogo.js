@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import logo from "../../images/dp_lighblue_textright_sm.png"
 
 const StyledLogo = styled.img`
@@ -15,7 +16,11 @@ const StyledLogo = styled.img`
 `
 
 const NavLogo = () => {
-  return <StyledLogo src={logo} alt="Di Paolo Web Developer" />
+  return (
+    <Link to="#header">
+      <StyledLogo src={logo} alt="Di Paolo Web Developer" />
+    </Link>
+  )
 }
 
 export default NavLogo
