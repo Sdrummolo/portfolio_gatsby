@@ -10,6 +10,11 @@ import Header from "../components/layout/Header"
 import About from "../components/layout/About"
 import Portfolio from "../components/layout/Portfolio"
 import Contact from "../components/layout/Contact"
+import styled from "styled-components"
+
+const Layout = styled.div`
+  position: relative;
+`
 
 const IndexPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,15 +23,18 @@ const IndexPage = () => {
 
   return (
     <>
-      <GlobalStyle hideOverflowY={isMenuOpen} />
-      <SEO title="Home" />
-      <Navbar handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
-      <Container>
-        <Header />
-        <About />
-        <Portfolio />
-        <Contact />
-      </Container>
+      <Layout>
+        <GlobalStyle hideOverflowY={isMenuOpen} />
+        <SEO title="Home" />
+        <Navbar handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
+        <BackgroundLogo />
+        <Container>
+          <Header />
+          <About />
+          <Portfolio />
+          <Contact />
+        </Container>
+      </Layout>
     </>
   )
 }
