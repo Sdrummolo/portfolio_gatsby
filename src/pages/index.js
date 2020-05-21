@@ -21,7 +21,6 @@ const IndexPage = () => {
       <GlobalStyle hideOverflowY={isMenuOpen} />
       <SEO title="Home" />
       <Navbar handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
-      <BackgroundLogo />
       <Container>
         <Header />
         <About />

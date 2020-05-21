@@ -18,6 +18,7 @@ const HeaderH1 = styled.h1`
   padding-top: 320px;
 
   @media (max-width: 768px) {
+    padding-top: 270px;
     font-size: 2.8rem;
   }
 `
@@ -27,6 +28,11 @@ const HeaderH3 = styled.h3`
   margin-bottom: 60px;
   font-size: 1.3rem;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
 `
 
 const NameSpan = styled.span`

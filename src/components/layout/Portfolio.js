@@ -40,7 +40,7 @@ const Portfolio = () => {
       <SectionDescription>
         Some of my recent <Bold>work</Bold>
         {projects.map((project, i) => (
-          <Project data={project} index={i} />
+          <Project data={project} index={i} key={i} />
         ))}
       </SectionDescription>
     </SectionContainer>

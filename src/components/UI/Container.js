@@ -13,5 +13,6 @@ export default styled.div`
   }
   @media (max-width: 576px) {
     max-width: 576px;
+    overflow-x: hidden;
   }
 `
