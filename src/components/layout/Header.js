@@ -15,6 +15,10 @@ const HeaderContainer = styled.div`
   @media (max-width: 768px) {
     padding: 1rem;
   }
+
+  @media only screen and (min-device-width: 411px) and (max-device-width: 840px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    height: 150vh;
+  }
 `
 
 const HeaderH1 = styled.h1`
@@ -54,7 +58,14 @@ const ArrowDown = styled.img`
   cursor: pointer;
 
   @media (max-width: 576px) {
-    bottom: 100px;
+    bottom: 120px;
+    width: 18px;
+    margin-left: -9px;
+  }
+
+  /* Remove arrow on landscape mobile */
+  @media only screen and (min-device-width: 411px) and (max-device-width: 840px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    display: none;
   }
 `
 

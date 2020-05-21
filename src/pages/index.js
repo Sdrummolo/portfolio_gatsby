@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import SEO from "../components/utilities/seo"
 import GlobalStyle from "../styles/global"
 
 // Components
@@ -21,7 +20,6 @@ const IndexPage = () => {
     <>
       <Layout>
         <GlobalStyle hideOverflowY={isMenuOpen} />
-        <SEO title="Home" />
         <Navbar handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
         <BackgroundLogo />
         <Container>

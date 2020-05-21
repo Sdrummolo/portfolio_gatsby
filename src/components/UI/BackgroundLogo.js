@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import logoLarge from "../../images/dp_blue_lg.png"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
-const StyledImage = styled.img`
-  position: absolute;
+const StyledImage = styled(Img)`
   top: -5%;
   overflow: hidden;
   opacity: 0.6;
@@ -38,7 +38,27 @@ const StyledImage = styled.img`
 `
 
 const BackgroundLogo = () => {
-  return <StyledImage src={logoLarge} alt={"Di Paolo Web Developer Logo"} />
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "dp_blue_lg.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  const image = data.file.childImageSharp.fluid
+
+  return (
+    <StyledImage
+      fluid={image}
+      alt="Di Paolo Web Developer logo large"
+      style={{ position: "absolute" }}
+    />
+  )
 }
 
 export default BackgroundLogo
