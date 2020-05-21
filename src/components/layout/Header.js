@@ -18,7 +18,7 @@ const HeaderH1 = styled.h1`
   padding-top: 320px;
 
   @media (max-width: 768px) {
-    padding-top: 270px;
+    /* padding-top: 270px; */
     font-size: 2.8rem;
   }
 `
@@ -47,13 +47,17 @@ const ArrowDown = styled.img`
   left: 50%;
   margin-left: -11px;
   cursor: pointer;
+
+  @media (max-width: 576px) {
+    bottom: 80px;
+  }
 `
 
 const Header = () => {
   return (
     <HeaderContainer>
       <HeaderH1>
-        Hi!
+        Hi
         <span role="img" aria-label="Cool emoji">
           ✌️
         </span>
