@@ -13,14 +13,18 @@ const Navbar = () => {
     }
   }
 
+  // Render appropriate navbar
+  useEffect(() => {
+    getDevice()
+  }, [])
+
   // Listen for resize
   useEffect(() => {
     window.addEventListener("resize", getDevice)
     return () => window.removeEventListener("resize", getDevice)
   }, [])
 
-  // return isMobile ? <MobileNavbar /> : <DesktopNavbar />
-  return <DesktopNavbar />
+  return isMobile ? <MobileNavbar /> : <DesktopNavbar />
 }
 
 export default Navbar
