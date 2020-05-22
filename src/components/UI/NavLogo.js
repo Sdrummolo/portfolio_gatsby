@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { useSpring, animated, config } from "react-spring"
+import { useSpring, animated } from "react-spring"
 import logo from "../../images/dp_lighblue_textright_sm.png"
 
 const StyledLogo = styled(animated.img)`
@@ -13,10 +13,8 @@ const StyledLogo = styled(animated.img)`
 
 const NavLogo = () => {
   const NavLogoSpring = useSpring({
-    config: config.wobbly,
     opacity: 1,
-    transform: "translateX(0px)",
-    from: { opacity: 0, transform: "translateX(-50px)" },
+    from: { opacity: 0 },
   })
   return (
     <Link to="#header">

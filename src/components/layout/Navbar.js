@@ -33,7 +33,7 @@ const Navbar = ({ handleOpenMenu, isMenuOpen }) => {
   const NavbarSping = useSpring({
     config: config.wobbly,
     height: "60px",
-    from: { height: "110px" },
+    from: { height: "80px" },
   })
 
   return (

@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useSpring, animated, config } from "react-spring"
 import styled from "styled-components"
 
-const StyledBurger = styled.div`
+const StyledBurger = styled(animated.div)`
   height: 30px;
   width: 30px;
   position: fixed;
@@ -41,8 +42,22 @@ const StyledBurger = styled.div`
 `
 
 const Burger = ({ isMenuOpen, handleOpenMenu }) => {
+  const BurgerSpring = useSpring({
+    config: config.wobbly,
+    delay: 300,
+    opacity: 1,
+    transform: "translateY(0px)",
+    from: {
+      opacity: 0,
+      transform: "translateY(20px)",
+    },
+  })
   return (
-    <StyledBurger onClick={handleOpenMenu} isMenuOpen={isMenuOpen}>
+    <StyledBurger
+      onClick={handleOpenMenu}
+      isMenuOpen={isMenuOpen}
+      style={BurgerSpring}
+    >
       <div></div>
       <div></div>
       <div></div>

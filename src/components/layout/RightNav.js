@@ -36,6 +36,7 @@ const RightNav = ({ isMenuOpen, handleOpenMenu }) => {
     delay: 300,
     opacity: 1,
     transform: "translateY(0px)",
+
     from: {
       opacity: 0,
       transform: "translateY(20px)",
