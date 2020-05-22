@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --main: #3282B8;
+    --main: #0077b6;
     --dark-grey: #333333;
     --light-grey: #525252;
     --white: #fff;
@@ -21,8 +21,11 @@ const GlobalStyle = createGlobalStyle`
     color: var(--light-grey);
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    overflow-y: ${props => (props.hideOverflowY ? "hidden" : "visible")};
+
+     /* Disallow vertical overflow if menu is open on mobile */
+    @media (max-width: 768px) {
+      overflow-y: ${props => (props.hideOverflowY ? "hidden" : "visible")};
+    }
   }
 
   a {
