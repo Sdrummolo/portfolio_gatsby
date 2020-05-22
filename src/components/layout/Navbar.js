@@ -1,30 +1,22 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import PropTypes from "prop-types"
+
+// Components
 import DesktopNavbar from "../layout/DesktopNavbar"
 import MobileNavbar from "../layout/MobileNavbar"
 
-const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(null)
+const Navbar = ({ isMobile, isOpen, toggleOpen }) => {
+  return isMobile ? (
+    <MobileNavbar isOpen={isOpen} toggleOpen={toggleOpen} />
+  ) : (
+    <DesktopNavbar />
+  )
+}
 
-  const getDevice = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true)
-    } else {
-      setIsMobile(false)
-    }
-  }
-
-  // Render appropriate navbar
-  useEffect(() => {
-    getDevice()
-  }, [])
-
-  // Listen for resize
-  useEffect(() => {
-    window.addEventListener("resize", getDevice)
-    return () => window.removeEventListener("resize", getDevice)
-  }, [])
-
-  return isMobile ? <MobileNavbar /> : <DesktopNavbar />
+Navbar.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  toggleOpen: PropTypes.func.isRequired,
 }
 
 export default Navbar

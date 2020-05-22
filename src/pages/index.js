@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import GlobalStyle from "../styles/global"
 
 // Components
@@ -12,12 +12,39 @@ import Portfolio from "../components/layout/Portfolio"
 import Contact from "../components/layout/Contact"
 
 const IndexPage = () => {
+  const [isMobile, setIsMobile] = useState(null)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const getDeviceWidth = () => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
+
+  // Open and close mobile menu
+  const toggleOpen = () => {
+    setIsOpen(isOpen => !isOpen)
+  }
+
+  // Render appropriate navbar
+  useEffect(() => {
+    getDeviceWidth()
+  }, [])
+
+  // Listen for resize
+  useEffect(() => {
+    window.addEventListener("resize", getDeviceWidth)
+    return () => window.removeEventListener("resize", getDeviceWidth)
+  }, [])
+
   return (
     <>
       <Layout>
-        <GlobalStyle />
+        <GlobalStyle isMobile={isMobile} isOpen={isOpen} />
         <BackgroundLogo />
-        <Navbar />
+        <Navbar isMobile={isMobile} isOpen={isOpen} toggleOpen={toggleOpen} />
         <Container>
           <Header />
           <About />

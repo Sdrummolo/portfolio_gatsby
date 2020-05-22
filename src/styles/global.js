@@ -22,11 +22,9 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-
-     /* Disallow vertical overflow if menu is open on mobile */
-    @media (max-width: 768px) {
-      overflow-y: ${props => (props.hideOverflowY ? "hidden" : "visible")};
-    }
+    /* Disallow vertical overflow if menu is open on mobile */
+    overflow-y: ${props =>
+      props.isMobile && props.isOpen ? "hidden" : "visible"};
   }
 
   a {

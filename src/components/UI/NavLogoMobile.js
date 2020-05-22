@@ -3,7 +3,9 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql, useStaticQuery, link, Link } from "gatsby"
 
-const StyledLogo = styled(Img)``
+const StyledLogo = styled(Img)`
+  z-index: 100;
+`
 
 const NavLogo = () => {
   const data = useStaticQuery(graphql`
