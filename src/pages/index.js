@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import GlobalStyle from "../styles/global"
 
 // Components
@@ -12,16 +12,12 @@ import Portfolio from "../components/layout/Portfolio"
 import Contact from "../components/layout/Contact"
 
 const IndexPage = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const handleOpenMenu = () => setIsMenuOpen(isMenuOpen => !isMenuOpen)
-
   return (
     <>
       <Layout>
-        <GlobalStyle hideOverflowY={isMenuOpen} />
-        <Navbar handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
+        <GlobalStyle />
         <BackgroundLogo />
+        <Navbar />
         <Container>
           <Header />
           <About />

@@ -1,28 +1,28 @@
 import React from "react"
+import Img from "gatsby-image"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { useSpring, animated } from "react-spring"
-import logo from "../../images/dp_lighblue_textright_sm.png"
+import { graphql, useStaticQuery, link, Link } from "gatsby"
 
-const StyledLogo = styled(animated.img)`
-  position: fixed;
-  top: 10px;
-  max-height: 40px;
-  z-index: 200;
-`
+const StyledLogo = styled(Img)``
 
 const NavLogo = () => {
-  const NavLogoSpring = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-  })
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "dp_lighblue_textright_sm.png" }) {
+        childImageSharp {
+          fixed(height: 50) {
+            ...GatsbyImageSharpFixed_tracedSVG
+          }
+        }
+      }
+    }
+  `)
+
+  const image = data.file.childImageSharp.fixed
+
   return (
     <Link to="#header">
-      <StyledLogo
-        src={logo}
-        alt="Di Paolo Web Developer"
-        style={NavLogoSpring}
-      />
+      <StyledLogo fixed={image}>Navlogo</StyledLogo>
     </Link>
   )
 }

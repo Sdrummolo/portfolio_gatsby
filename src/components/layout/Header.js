@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { useSpring, animated, config } from "react-spring"
-
+import { Link } from "gatsby"
 import arrowDown from "../../images/arrow_down.svg"
 
 // Components
 import Button from "../UI/Button"
 import Bold from "../UI/Bold"
-import { Link } from "gatsby"
 
 const HeaderContainer = styled.div`
   height: 100vh;
