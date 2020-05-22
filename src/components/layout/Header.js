@@ -59,7 +59,7 @@ const ArrowDown = styled.img`
   cursor: pointer;
 
   @media (max-width: 576px) {
-    bottom: 50px;
+    bottom: 60px;
     width: 18px;
     margin-left: -9px;
   }

@@ -42,8 +42,8 @@ const BackgroundLogo = () => {
     {
       file(relativePath: { eq: "dp_blue_lg.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 80, maxHeight: 1080) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

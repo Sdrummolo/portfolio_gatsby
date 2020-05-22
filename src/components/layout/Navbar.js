@@ -38,9 +38,8 @@ const Navbar = ({ handleOpenMenu, isMenuOpen }) => {
   return (
     <NavBar isMenuOpen={isMenuOpen}>
       <div className="container">
-        <Link to="/">
-          <NavLogo />
-        </Link>
+        <NavLogo />
+
         <Burger handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
         <RightNav isMenuOpen={isMenuOpen} handleOpenMenu={handleOpenMenu} />
       </div>
