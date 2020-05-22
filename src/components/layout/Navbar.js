@@ -1,13 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
+import { useSpring, animated, config } from "react-spring"
 
 // Components
 import NavLogo from "../UI/NavLogo"
 import Burger from "./Burger"
 import RightNav from "./RightNav"
 
-const NavBar = styled.nav`
+const NavBar = styled(animated.nav)`
   background-color: ${({ isMenuOpen }) =>
     isMenuOpen ? "white" : "rgba(255, 255, 255, 0.9)"};
   box-shadow: 0 5px 20px rgba(98, 98, 98, 0.15);
@@ -16,11 +16,6 @@ const NavBar = styled.nav`
   left: 0;
   min-width: 100%;
   z-index: 100;
-  height: 80px;
-
-  @media (max-width: 768px) {
-    height: 60px;
-  }
 
   .container {
     position: relative;
@@ -35,11 +30,16 @@ const NavBar = styled.nav`
 `
 
 const Navbar = ({ handleOpenMenu, isMenuOpen }) => {
+  const NavbarSping = useSpring({
+    config: config.wobbly,
+    height: "60px",
+    from: { height: "110px" },
+  })
+
   return (
-    <NavBar isMenuOpen={isMenuOpen}>
+    <NavBar isMenuOpen={isMenuOpen} style={NavbarSping}>
       <div className="container">
         <NavLogo />
-
         <Burger handleOpenMenu={handleOpenMenu} isMenuOpen={isMenuOpen} />
         <RightNav isMenuOpen={isMenuOpen} handleOpenMenu={handleOpenMenu} />
       </div>

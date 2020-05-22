@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { useSpring, animated } from "react-spring"
 
 const StyledImage = styled(Img)`
   top: -5%;
@@ -38,6 +39,12 @@ const StyledImage = styled(Img)`
 `
 
 const BackgroundLogo = () => {
+  const BackgroundLogoSpring = useSpring({
+    delay: 200,
+    opacity: 1,
+    from: { opacity: 0 },
+  })
+
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "dp_blue_lg.png" }) {
@@ -53,11 +60,13 @@ const BackgroundLogo = () => {
   const image = data.file.childImageSharp.fluid
 
   return (
-    <StyledImage
-      fluid={image}
-      alt="Di Paolo Web Developer logo large"
-      style={{ position: "absolute" }}
-    />
+    <animated.div style={BackgroundLogoSpring}>
+      <StyledImage
+        fluid={image}
+        alt="Di Paolo Web Developer logo large"
+        style={{ position: "absolute" }}
+      />
+    </animated.div>
   )
 }
 

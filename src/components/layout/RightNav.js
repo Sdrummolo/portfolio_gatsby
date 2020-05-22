@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { useSpring, animated, config } from "react-spring"
 
-const UL = styled.ul`
+const UL = styled(animated.ul)`
   display: flex;
   flex-flow: row nowrap;
   font-size: 0.8rem;
@@ -30,8 +31,19 @@ const UL = styled.ul`
 `
 
 const RightNav = ({ isMenuOpen, handleOpenMenu }) => {
+  const NavbarSpring = useSpring({
+    config: config.wobbly,
+    delay: 300,
+    opacity: 1,
+    transform: "translateY(0px)",
+    from: {
+      opacity: 0,
+      transform: "translateY(20px)",
+    },
+  })
+
   return (
-    <UL isMenuOpen={isMenuOpen}>
+    <UL isMenuOpen={isMenuOpen} style={NavbarSpring}>
       <li>
         <Link to="#about" onClick={isMenuOpen ? handleOpenMenu : null}>
           About me
