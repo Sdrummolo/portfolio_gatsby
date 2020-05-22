@@ -33,17 +33,17 @@ const RightNav = ({ isMenuOpen, handleOpenMenu }) => {
   return (
     <UL isMenuOpen={isMenuOpen}>
       <li>
-        <Link to="#about" onClick={handleOpenMenu}>
+        <Link to="#about" onClick={isMenuOpen ? handleOpenMenu : null}>
           About me
         </Link>
       </li>
       <li>
-        <Link to="#portfolio" onClick={handleOpenMenu}>
+        <Link to="#portfolio" onClick={isMenuOpen ? handleOpenMenu : null}>
           Portfolio
         </Link>
       </li>
       <li>
-        <Link to="#contact" onClick={handleOpenMenu}>
+        <Link to="#contact" onClick={isMenuOpen ? handleOpenMenu : null}>
           Contact
         </Link>
       </li>
