@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import GlobalStyle from "../styles/global"
-import { Waypoint } from "react-waypoint"
 
 // Components
 import Layout from "../components/layout/layout"
@@ -62,7 +61,7 @@ const IndexPage = () => {
           <Portfolio />
           <Contact />
         </Container>
-        {/* <ScrollUpButton scrollUp={scrollUp} /> */}
+        <ScrollUpButton scrollUp={scrollUp} />
       </Layout>
     </>
   )

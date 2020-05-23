@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-
-// Components
+import { useSpring, animated, config } from "react-spring"
 import Button from "../UI/Button"
 
+// Components
 const Title = styled.h2`
   font-size: 1rem;
   color: var(--main);
@@ -15,7 +15,7 @@ const Title = styled.h2`
   display: inline-block;
 `
 
-const ProjectContainer = styled.div`
+const ProjectContainer = styled(animated.div)`
   display: flex;
   flex-direction: ${props => (props.index % 2 === 0 ? "row" : "row-reverse")};
 
@@ -64,6 +64,16 @@ const ButtonsContainer = styled.div`
 `
 
 const Project = ({ data, index }) => {
+  const ProjectSpring = useSpring({
+    config: config.default,
+    opacity: 1,
+    transform: "translateX(0px)",
+    from: {
+      opacity: 0,
+      transform: index % 2 === 0 ? "translateX(300px)" : "translateX(-300px)",
+    },
+  })
+
   const {
     title,
     description,
@@ -74,7 +84,7 @@ const Project = ({ data, index }) => {
   } = data.node
 
   return (
-    <div>
+    <animated.div style={ProjectSpring}>
       <Title>{title}</Title>
       <ProjectContainer index={index}>
         <FlexItem>
@@ -95,7 +105,7 @@ const Project = ({ data, index }) => {
           </ButtonsContainer>
         </FlexItem>
       </ProjectContainer>
-    </div>
+    </animated.div>
   )
 }
 

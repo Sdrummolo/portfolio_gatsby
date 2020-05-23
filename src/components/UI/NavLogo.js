@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { graphql, useStaticQuery, link, Link } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const StyledLogo = styled(Img)``
 

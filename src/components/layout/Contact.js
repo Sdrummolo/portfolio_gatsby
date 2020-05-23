@@ -14,6 +14,11 @@ const IconsContainer = styled.div`
   img {
     margin: 35px 20px;
     max-width: 30px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 `
 
