@@ -18,6 +18,21 @@ const IndexPage = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrollUp, setScrollUp] = useState(false)
 
+  // Listen for resize and scroll
+  useEffect(() => {
+    window.addEventListener("resize", getDeviceWidth)
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("resize", getDeviceWidth)
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  // load appropriate navbar on render
+  useEffect(() => {
+    getDeviceWidth()
+  }, [])
+
   const getDeviceWidth = () => {
     if (window.innerWidth <= 768) {
       setIsMobile(true)
@@ -30,23 +45,6 @@ const IndexPage = () => {
   const toggleOpen = () => {
     setIsOpen(isOpen => !isOpen)
   }
-
-  // Render appropriate navbar
-  useEffect(() => {
-    getDeviceWidth()
-  }, [])
-
-  // Listen for resize
-  useEffect(() => {
-    window.addEventListener("resize", getDeviceWidth)
-    return () => window.removeEventListener("resize", getDeviceWidth)
-  }, [])
-
-  // Listen for scroll
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   const handleScroll = e => {
     window.pageYOffset > 800 ? setScrollUp(true) : setScrollUp(false)
@@ -64,7 +62,7 @@ const IndexPage = () => {
           <Portfolio />
           <Contact />
         </Container>
-        <ScrollUpButton scrollUp={scrollUp} />
+        {/* <ScrollUpButton scrollUp={scrollUp} /> */}
       </Layout>
     </>
   )
