@@ -16,5 +16,11 @@ export default styled.button`
   outline: none;
   cursor: pointer;
   margin-right: ${props => (props.marginRight ? "20px" : "0")};
-  transition: background 0.2s ease-in-out border 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${props => (props.main ? "#1471a3" : "#f7f7f7")};
+    border: ${props =>
+      props.main ? "solid 1px #1471a3" : "solid 1px var(--light-grey)"};
+  }
 `

@@ -6,7 +6,6 @@ import arrowDown from "../../images/arrow_down_black.svg"
 
 // Components
 import Button from "../UI/Button"
-import Bold from "../UI/Bold"
 import WordsFading from "../UI/WordsFading"
 
 const AnimatedButton = animated(Button)
