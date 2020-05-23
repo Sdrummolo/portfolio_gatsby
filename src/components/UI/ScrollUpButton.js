@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
+import PropTypes from "prop-types"
 import arrow from "../../images/arrow_down.svg"
 
 const StyledDiv = styled(animated.div)`
@@ -32,6 +33,10 @@ const StyledDiv = styled(animated.div)`
     box-shadow: 0px 15px 20px rgba(98, 98, 98, 0.3);
   }
 
+  a {
+    margin: auto;
+  }
+
   img {
     height: 15px;
     width: 15px;
@@ -47,18 +52,21 @@ const StyledDiv = styled(animated.div)`
 
 const ScrollUpButton = ({ scrollUp }) => {
   const ButtonSpring = useSpring({
-    from: {
-      opacity: scrollUp ? 0 : 1,
-    },
     to: {
       opacity: scrollUp ? 1 : 0,
     },
   })
   return (
     <StyledDiv style={ButtonSpring}>
-      <img src={arrow} alt="" />
+      <Link to="#header">
+        <img src={arrow} alt="" />
+      </Link>
     </StyledDiv>
   )
+}
+
+ScrollUpButton.propTypes = {
+  scrollUp: PropTypes.bool.isRequired,
 }
 
 export default ScrollUpButton

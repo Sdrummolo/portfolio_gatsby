@@ -40,7 +40,6 @@ const MobileUL = ({ toggleOpen, isOpen }) => {
     config: config.default,
     from: {
       height: isOpen ? "0" : "100vh",
-      display: isOpen ? 0 : 1,
     },
     to: {
       height: isOpen ? "100vh" : "0",
