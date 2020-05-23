@@ -16,4 +16,5 @@ export default styled.button`
   outline: none;
   cursor: pointer;
   margin-right: ${props => (props.marginRight ? "20px" : "0")};
+  transition: background 0.2s ease-in-out border 0.2s ease-in-out;
 `

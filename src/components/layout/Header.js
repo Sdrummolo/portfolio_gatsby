@@ -7,6 +7,7 @@ import arrowDown from "../../images/arrow_down_black.svg"
 // Components
 import Button from "../UI/Button"
 import Bold from "../UI/Bold"
+import WordsFading from "../UI/WordsFading"
 
 const AnimatedButton = animated(Button)
 
@@ -28,7 +29,7 @@ const HeaderContainer = styled.div`
 `
 
 const HeaderH1 = styled(animated.h1)`
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 300;
 
   @media (max-width: 768px) {
@@ -109,7 +110,7 @@ const Header = () => {
         , <br />I am <NameSpan>Luigi</NameSpan>
       </HeaderH1>
       <HeaderH3 style={H3Spring}>
-        A <Bold>passionate</Bold> web developer
+        A <WordsFading /> web developer
       </HeaderH3>
       <Link to="#about">
         <AnimatedButton main style={ButtonSpring}>
