@@ -11,11 +11,13 @@ import Bold from "../UI/Bold"
 const HeaderContainer = styled.div`
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 0 5rem;
 
   @media (max-width: 768px) {
     padding: 1rem;
-    height: 90vh;
   }
 
   @media only screen and (min-device-width: 411px) and (max-device-width: 840px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
@@ -26,10 +28,8 @@ const HeaderContainer = styled.div`
 const HeaderH1 = styled(animated.h1)`
   font-size: 3.5rem;
   font-weight: 300;
-  padding-top: 20rem;
 
   @media (max-width: 768px) {
-    padding-top: 16rem;
     font-size: 2.8rem;
   }
 `
@@ -42,7 +42,6 @@ const HeaderH3 = styled(animated.h3)`
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
-    margin-bottom: 30px;
   }
 `
 
@@ -57,7 +56,12 @@ const ArrowDown = styled.img`
   bottom: 20px;
   left: 50%;
   margin-left: -11px;
+  transition: all 0.2s ease-out;
   cursor: pointer;
+
+  &:hover {
+    padding-bottom: 10px;
+  }
 
   @media (max-width: 576px) {
     bottom: 60px;
