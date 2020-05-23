@@ -8,6 +8,8 @@ import arrowDown from "../../images/arrow_down.svg"
 import Button from "../UI/Button"
 import Bold from "../UI/Bold"
 
+const AnimatedButton = animated(Button)
+
 const HeaderContainer = styled.div`
   height: 100vh;
   position: relative;
@@ -71,7 +73,6 @@ const ArrowDown = styled.img`
     display: none;
   }
 `
-const AnimatedButton = animated(Button)
 
 const Header = () => {
   const H1Spring = useSpring({
@@ -91,9 +92,10 @@ const Header = () => {
   })
 
   const ButtonSpring = useSpring({
-    delay: 400,
     opacity: 1,
-    from: { opacity: 0 },
+    from: {
+      opacity: 0,
+    },
   })
 
   return (

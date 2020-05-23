@@ -18,14 +18,14 @@ const IndexPage = () => {
   const [scrollUp, setScrollUp] = useState(false)
 
   // Listen for resize and scroll
-  useEffect(() => {
-    window.addEventListener("resize", getDeviceWidth)
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("resize", getDeviceWidth)
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener("resize", getDeviceWidth)
+  //   window.addEventListener("scroll", handleScroll)
+  //   return () => {
+  //     window.removeEventListener("resize", getDeviceWidth)
+  //     window.removeEventListener("scroll", handleScroll)
+  //   }
+  // }, [])
 
   // load appropriate navbar on render
   useEffect(() => {
@@ -61,7 +61,7 @@ const IndexPage = () => {
           <Portfolio />
           <Contact />
         </Container>
-        {/* <ScrollUpButton scrollUp={scrollUp} /> */}
+        <ScrollUpButton scrollUp={scrollUp} />
       </Layout>
     </>
   )
