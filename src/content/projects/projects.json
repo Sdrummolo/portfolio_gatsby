@@ -9,10 +9,25 @@
   },
   {
     "title": "E-Buy",
-    "description": "Social media Web App built with React.",
+    "description": "E-commerce website powered by Ebay Finding API",
     "image": "../images/ebuy.png",
     "technologies": "Css3, React",
     "siteUrl": "https://sdrummolo.github.io/ebuy/",
     "repoUrl": "https://github.com/Sdrummolo/ebuy"
+  },
+  {
+    "title": "Flack",
+    "description": "Slack-like application based on flask and socket-io",
+    "image": "../images/flack.png",
+    "technologies": "Html5, Sass, Python",
+    "repoUrl": "https://github.com/Sdrummolo/flack"
+  },
+  {
+    "title": "This Portfolio",
+    "description": "Portfolio built with Gatsby.",
+    "image": "../images/portfolio.png",
+    "technologies": "React, Gatsby, Styled Components, GraphQL",
+    "siteUrl": "https://www.dipaololuigi.com/",
+    "repoUrl": "https://github.com/Sdrummolo/portfolio_gatsby"
   }
 ]

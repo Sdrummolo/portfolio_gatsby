@@ -94,11 +94,13 @@ const Project = ({ data, index }) => {
           <p>{description}</p>
           <small>{technologies}</small>
           <ButtonsContainer>
-            <a href={siteUrl} target="_blank" rel="noreferrer">
-              <Button main marginRight>
-                Live
-              </Button>
-            </a>
+            {siteUrl ? (
+              <a href={siteUrl} target="_blank" rel="noreferrer">
+                <Button main marginRight>
+                  Live
+                </Button>
+              </a>
+            ) : null}
             <a href={repoUrl} target="_blank" rel="noreferrer">
               <Button white>Repo</Button>
             </a>
