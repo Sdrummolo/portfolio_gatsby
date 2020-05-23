@@ -91,11 +91,9 @@ const Header = () => {
   })
 
   const ButtonSpring = useSpring({
-    config: config.default,
     delay: 400,
     opacity: 1,
-    transform: "translateX(0px)",
-    from: { opacity: 0, transform: "translateX(-50px)" },
+    from: { opacity: 0 },
   })
 
   return (

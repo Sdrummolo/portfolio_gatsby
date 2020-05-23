@@ -96,7 +96,7 @@ const Project = ({ data, index }) => {
           <ButtonsContainer>
             <a href={siteUrl} target="_blank" rel="noreferrer">
               <Button main marginRight>
-                Live Site
+                Live
               </Button>
             </a>
             <a href={repoUrl} target="_blank" rel="noreferrer">
