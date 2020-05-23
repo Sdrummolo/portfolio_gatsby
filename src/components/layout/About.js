@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import resume from "../../content/static/resume.pdf"
 
 // Components
 import SectionContainer from "../UI/SectionContainer"
@@ -53,7 +54,9 @@ const About = ({ toggleScrollUp }) => {
         COMPONENTS, GATSBY, GRAPHQL, NPM, PYTHON, FLASK
       </Stack>
       <ResumeContainer>
-        <Button main>Resume</Button>
+        <a href={resume} target="_blank" rel="noreferrer">
+          <Button main>Resume</Button>
+        </a>
       </ResumeContainer>
     </SectionContainer>
   )

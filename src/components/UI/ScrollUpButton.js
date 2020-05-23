@@ -18,7 +18,7 @@ const StyledDiv = styled(animated.div)`
   align-items: center;
   justify-items: center;
   box-shadow: 0px 8px 15px rgba(98, 98, 98, 0.3);
-  transition: all 0.2s ease-out;
+  transition: transform 0.2s ease-out;
   cursor: pointer;
 
   @media (max-width: 768px) {

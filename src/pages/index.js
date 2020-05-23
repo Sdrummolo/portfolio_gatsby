@@ -50,20 +50,18 @@ const IndexPage = () => {
   }
 
   return (
-    <>
-      <Layout>
-        <GlobalStyle isMobile={isMobile} isOpen={isOpen} />
-        <BackgroundLogo />
-        <Navbar isMobile={isMobile} isOpen={isOpen} toggleOpen={toggleOpen} />
-        <Container>
-          <Header />
-          <About />
-          <Portfolio />
-          <Contact />
-        </Container>
-        <ScrollUpButton scrollUp={scrollUp} />
-      </Layout>
-    </>
+    <Layout>
+      <GlobalStyle isMobile={isMobile} isOpen={isOpen} />
+      <BackgroundLogo />
+      <Navbar isMobile={isMobile} isOpen={isOpen} toggleOpen={toggleOpen} />
+      <Container>
+        <Header />
+        <About />
+        <Portfolio />
+        <Contact />
+      </Container>
+      <ScrollUpButton scrollUp={scrollUp} />
+    </Layout>
   )
 }
 

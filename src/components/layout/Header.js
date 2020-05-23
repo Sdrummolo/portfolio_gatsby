@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useSpring, animated, config } from "react-spring"
 import { Link } from "gatsby"
-import arrowDown from "../../images/arrow_down.svg"
+import arrowDown from "../../images/arrow_down_black.svg"
 
 // Components
 import Button from "../UI/Button"
@@ -117,7 +117,7 @@ const Header = () => {
         </AnimatedButton>
       </Link>
       <Link to="#about">
-        <ArrowDown src={arrowDown} alt="Arrow down" />
+        <ArrowDown src={arrowDown} alt="Scroll down" />
       </Link>
     </HeaderContainer>
   )
