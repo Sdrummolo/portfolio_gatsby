@@ -44,7 +44,7 @@ const MobileNavbar = ({ isOpen, toggleOpen }) => {
       <NavContainer>
         <NavLogoMobile />
         <BurgerMenu toggleOpen={toggleOpen} isOpen={isOpen} />
-        {isOpen ? <MobileUL toggleOpen={toggleOpen} /> : null}
+        <MobileUL toggleOpen={toggleOpen} isOpen={isOpen} />
       </NavContainer>
     </StyledNav>
   )

@@ -17,7 +17,7 @@ const MobileULContainer = styled(animated.div)`
     margin: auto;
 
     li {
-      padding: 20px;
+      padding: 20px 0;
       text-align: center;
 
       a {
@@ -36,12 +36,16 @@ const MobileULContainer = styled(animated.div)`
   }
 `
 
-const MobileUL = ({ toggleOpen }) => {
+const MobileUL = ({ toggleOpen, isOpen }) => {
   const ULSpring = useSpring({
     config: config.default,
-    height: "100vh",
     from: {
-      height: "0vh",
+      height: isOpen ? "0" : "100vh",
+      display: isOpen ? 0 : 1,
+    },
+    to: {
+      height: isOpen ? "100vh" : "0",
+      opacity: isOpen ? 1 : 0,
     },
   })
 
