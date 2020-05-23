@@ -61,7 +61,7 @@ const IndexPage = () => {
           <Portfolio />
           <Contact />
         </Container>
-        <ScrollUpButton scrollUp={scrollUp} />
+        {/* <ScrollUpButton scrollUp={scrollUp} /> */}
       </Layout>
     </>
   )

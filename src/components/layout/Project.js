@@ -84,7 +84,7 @@ const Project = ({ data, index }) => {
   } = data.node
 
   return (
-    <animated.div style={ProjectSpring}>
+    <div>
       <Title>{title}</Title>
       <ProjectContainer index={index}>
         <FlexItem>
@@ -107,7 +107,7 @@ const Project = ({ data, index }) => {
           </ButtonsContainer>
         </FlexItem>
       </ProjectContainer>
-    </animated.div>
+    </div>
   )
 }
 
