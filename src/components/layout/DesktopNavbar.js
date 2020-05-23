@@ -55,7 +55,7 @@ const DesktopNavbar = () => {
     opacity: 1,
     from: {
       opacity: 0,
-      height: 0,
+      height: -100,
     },
   })
 

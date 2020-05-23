@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../utilities/seo"
+import Helmet from "react-helmet"
+import favicon from "../../images/favicon.ico"
 
 const StyledMain = styled.main`
   position: relative;

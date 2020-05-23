@@ -64,16 +64,6 @@ const ButtonsContainer = styled.div`
 `
 
 const Project = ({ data, index }) => {
-  const ProjectSpring = useSpring({
-    config: config.default,
-    opacity: 1,
-    transform: "translateX(0px)",
-    from: {
-      opacity: 0,
-      transform: index % 2 === 0 ? "translateX(300px)" : "translateX(-300px)",
-    },
-  })
-
   const {
     title,
     description,

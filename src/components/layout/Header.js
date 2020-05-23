@@ -75,6 +75,7 @@ const ArrowDown = styled.img`
 `
 
 const Header = () => {
+  console.log("rendered")
   const H1Spring = useSpring({
     config: config.default,
     delay: 200,
@@ -92,10 +93,10 @@ const Header = () => {
   })
 
   const ButtonSpring = useSpring({
+    config: config.default,
+    transform: "translateX(0px)",
     opacity: 1,
-    from: {
-      opacity: 0,
-    },
+    from: { opacity: 0, transform: "translateX(-50px)" },
   })
 
   return (
