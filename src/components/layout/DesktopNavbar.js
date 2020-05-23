@@ -43,7 +43,6 @@ const UL = styled(animated.ul)`
 
     &:hover {
       color: var(--main);
-      border-bottom: 3px solid var(--main);
     }
   }
 `
@@ -56,7 +55,7 @@ const DesktopNavbar = () => {
     opacity: 1,
     from: {
       opacity: 0,
-      height: 120,
+      height: 0,
     },
   })
 

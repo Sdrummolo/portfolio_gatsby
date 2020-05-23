@@ -9,4 +9,8 @@ export default styled.h2`
   border-bottom: 4px solid var(--main);
   margin-bottom: 40px;
   display: inline-block;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `

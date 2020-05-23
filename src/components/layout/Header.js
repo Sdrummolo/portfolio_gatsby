@@ -30,14 +30,14 @@ const HeaderH1 = styled(animated.h1)`
   font-weight: 300;
 
   @media (max-width: 768px) {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 `
 
 const HeaderH3 = styled(animated.h3)`
   margin-top: 1rem;
   margin-bottom: 4rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
 
   @media (max-width: 768px) {
@@ -64,9 +64,7 @@ const ArrowDown = styled.img`
   }
 
   @media (max-width: 576px) {
-    bottom: 60px;
-    width: 18px;
-    margin-left: -9px;
+    display: none;
   }
   /* Remove arrow on landscape mobile */
   @media only screen and (min-device-width: 411px) and (max-device-width: 840px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {

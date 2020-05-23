@@ -5,4 +5,8 @@ export default styled.h3`
   font-weight: 400;
   line-height: 2rem;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `

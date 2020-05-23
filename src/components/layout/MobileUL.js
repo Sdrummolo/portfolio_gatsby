@@ -19,17 +19,16 @@ const MobileULContainer = styled(animated.div)`
     li {
       padding: 20px 0;
       text-align: center;
+      /* box-sizing: border-box; */
 
       a {
         text-transform: uppercase;
         font-weight: 600;
         font-size: 0.9rem;
         transition: all 0.2s;
-        border: 3px solid transparent;
 
         &:hover {
           color: var(--main);
-          border-bottom: 3px solid var(--main);
         }
       }
     }

@@ -30,7 +30,7 @@ const ResumeContainer = styled.div`
   font-size: 0.8rem;
 `
 
-const About = () => {
+const About = ({ toggleScrollUp }) => {
   return (
     <SectionContainer centerText id="about">
       <SectionTitle>About me</SectionTitle>
