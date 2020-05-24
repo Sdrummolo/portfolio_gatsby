@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { useSpring, animated, config } from "react-spring"
 import Button from "../UI/Button"
 
 // Components
@@ -15,7 +14,7 @@ const Title = styled.h2`
   display: inline-block;
 `
 
-const ProjectContainer = styled(animated.div)`
+const ProjectContainer = styled.div`
   display: flex;
   flex-direction: ${props => (props.index % 2 === 0 ? "row" : "row-reverse")};
 

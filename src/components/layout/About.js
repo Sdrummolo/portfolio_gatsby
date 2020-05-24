@@ -1,5 +1,7 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import resume from "../../content/static/resume.pdf"
 
 // Components
@@ -31,29 +33,38 @@ const ResumeContainer = styled.div`
   font-size: 0.8rem;
 `
 
-const About = ({ toggleScrollUp }) => {
+const About = () => {
+  const data = useStaticQuery(graphql`
+    {
+      aboutJson {
+        text
+        stack
+      }
+    }
+  `)
+
+  const { text, stack } = data.aboutJson
+
   return (
     <SectionContainer centerText id="about">
       <SectionTitle>About me</SectionTitle>
       <SectionDescription>
         Let me <Bold>introduce myself</Bold>
       </SectionDescription>
-      <AboutText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto
-        atque inventore eaque rem incidunt quam minima est accusamus nesciunt
-        vel itaque molestias, mollitia adipisci ipsam voluptas unde, blanditiis
-        harum neque amet ea? Cupiditate repellendus fugit, soluta non fuga
-        laudantium ut pariatur similique voluptates laboriosam accusantium eos
-        accusamus explicabo reprehenderit?
-      </AboutText>
+      <AboutText>{text}</AboutText>
       <SectionDescription>
         My current stack of <Bold>languages/technologies</Bold> include:
       </SectionDescription>
-      <Stack>
-        HTML5, CSS3, JAVASCRIPT, SASS, REACT, CONTEXT API, CSS MODULES, STYLED
-        COMPONENTS, GATSBY, GRAPHQL, NPM, PYTHON, FLASK
-      </Stack>
-      <ResumeContainer>
+      <Stack>{stack}</Stack>
+      <ResumeContainer
+        onClick={() => {
+          trackCustomEvent({
+            category: "Viewed resume",
+            action: "click",
+            label: "Resume button",
+          })
+        }}
+      >
         <a href={resume} target="_blank" rel="noreferrer">
           <Button main>Resume</Button>
         </a>

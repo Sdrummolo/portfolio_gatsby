@@ -75,7 +75,6 @@ const ArrowDown = styled.img`
 `
 
 const Header = () => {
-  console.log("rendered")
   const H1Spring = useSpring({
     config: config.default,
     delay: 200,
