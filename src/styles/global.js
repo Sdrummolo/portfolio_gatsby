@@ -20,8 +20,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     color: var(--light-grey);
     line-height: 1.2;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     /* Disallow vertical overflow if menu is open on mobile */
