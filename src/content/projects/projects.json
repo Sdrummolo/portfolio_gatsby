@@ -24,7 +24,7 @@
   },
   {
     "title": "This Portfolio",
-    "description": "I've strived to make it fast and maintainable above all else. it produces static files with Gatsby and can be easily updated by modifying a JSON file",
+    "description": "I've strived to make it fast and maintainable above all else. it produces static files with Gatsby and can be easily updated by modifying a JSON file.",
     "image": "../images/portfolio.png",
     "technologies": "React, Gatsby, Styled Components, GraphQL",
     "siteUrl": "https://www.dipaololuigi.com/",

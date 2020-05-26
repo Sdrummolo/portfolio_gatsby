@@ -11,7 +11,8 @@ import WordsFading from "../UI/WordsFading"
 const AnimatedButton = animated(Button)
 
 const HeaderContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
   position: relative;
   display: flex;
