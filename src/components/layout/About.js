@@ -57,7 +57,7 @@ const About = () => {
       <AboutIntro>{intro}</AboutIntro>
       <AboutText>{text}</AboutText>
       <SectionDescription>
-        My current stack of <Bold>languages/technologies</Bold> include:
+        My current stack of <Bold>languages/technologies</Bold> is:
       </SectionDescription>
       <Stack>{stack}</Stack>
       <ResumeContainer
