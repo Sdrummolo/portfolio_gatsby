@@ -11,7 +11,6 @@ import WordsFading from "../UI/WordsFading"
 const AnimatedButton = animated(Button)
 
 const HeaderContainer = styled.div`
-  min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
   position: relative;
@@ -68,7 +67,11 @@ const ArrowDown = styled.img`
   }
 
   @media (max-width: 576px) {
-    bottom: 0;
+    bottom: 10px;
+
+    &:hover {
+      padding-bottom: 0;
+    }
   }
 `
 
