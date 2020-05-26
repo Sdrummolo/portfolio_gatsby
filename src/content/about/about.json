@@ -1,4 +1,5 @@
 {
-  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto atque inventore eaque rem incidunt quam minima est accusamus nesciunt vel itaque molestias, mollitia adipisci ipsam voluptas unde, blanditiis harum neque amet ea? Cupiditate repellendus fugit, soluta non fuga laudantium ut pariatur similique voluptates laboriosam accusantium eos accusamus explicabo reprehenderit?",
+  "intro": "I'm a 24 years old front-end web developer based in Dublin, Ireland.",
+  "text": "In love with functional programming and React, my daily goal is to create beautiful, clean code and to stay with up to date with the new standards in the Javascript world.",
   "stack": "HTML5, CSS3, JAVASCRIPT, SASS, REACT, CONTEXT API, CSS MODULES, STYLED COMPONENTS, GATSBY, GRAPHQL, NPM, PYTHON, FLASK"
 }

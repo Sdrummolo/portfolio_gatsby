@@ -1,7 +1,7 @@
 [
   {
     "title": "Tweeetter",
-    "description": "Social media Web App built with React.",
+    "description": "Social media Web App built with React. Users can comment, like posts and add new tweets.",
     "image": "../images/tweeetter.png",
     "technologies": "Css3, React",
     "siteUrl": "https://sdrummolo.github.io/tweeetter/",
@@ -17,14 +17,14 @@
   },
   {
     "title": "Flack",
-    "description": "Slack-like application based on flask and socket-io",
+    "description": "Slack-like application based on Flask and Socket-IO. Users can register, create channels, chat and view who is online.",
     "image": "../images/flack.png",
-    "technologies": "Html5, Sass, Python",
+    "technologies": "Sass, Python",
     "repoUrl": "https://github.com/Sdrummolo/flack"
   },
   {
     "title": "This Portfolio",
-    "description": "Portfolio built with Gatsby.",
+    "description": "I've strived to make it fast and maintainable above all else. it produces static files with Gatsby and can be easily updated by modifying a JSON file",
     "image": "../images/portfolio.png",
     "technologies": "React, Gatsby, Styled Components, GraphQL",
     "siteUrl": "https://www.dipaololuigi.com/",

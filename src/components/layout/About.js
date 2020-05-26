@@ -11,10 +11,15 @@ import SectionDescription from "../UI/SectionDescription"
 import Bold from "../UI/Bold"
 import Button from "../UI/Button"
 
-const AboutText = styled.p`
-  margin: 2.5rem 0;
+const AboutIntro = styled.p`
   line-height: 2rem;
 `
+
+const AboutText = styled.p`
+  margin-bottom: 2.5rem;
+  line-height: 2rem;
+`
+
 const Stack = styled.h4`
   font-size: 1.1rem;
   font-weight: 700;
@@ -39,18 +44,17 @@ const About = () => {
       aboutJson {
         text
         stack
+        intro
       }
     }
   `)
 
-  const { text, stack } = data.aboutJson
+  const { intro, text, stack } = data.aboutJson
 
   return (
     <SectionContainer centerText id="about">
       <SectionTitle>About me</SectionTitle>
-      <SectionDescription>
-        Let me <Bold>introduce myself</Bold>
-      </SectionDescription>
+      <AboutIntro>{intro}</AboutIntro>
       <AboutText>{text}</AboutText>
       <SectionDescription>
         My current stack of <Bold>languages/technologies</Bold> include:

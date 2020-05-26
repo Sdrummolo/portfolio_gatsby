@@ -57,11 +57,11 @@ const ScrollUpButton = ({ scrollUp }) => {
     },
   })
   return (
-    <StyledDiv style={ButtonSpring}>
-      <Link to="#header">
+    <Link to="#header">
+      <StyledDiv style={ButtonSpring}>
         <img src={arrow} alt="" />
-      </Link>
-    </StyledDiv>
+      </StyledDiv>
+    </Link>
   )
 }
 

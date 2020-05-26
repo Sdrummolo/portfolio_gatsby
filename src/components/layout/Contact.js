@@ -35,7 +35,7 @@ const Contact = () => {
       <SectionTitle>Contact Me</SectionTitle>
       <SectionDescription>
         If you want to <Bold>start a project</Bold> with me, or talk about a
-        <Bold>job</Bold>, you can <Bold>find</Bold> me at:
+        <Bold> job</Bold>, you can <Bold>find</Bold> me at:
         <br />
         <br />
         <a href="mailto: dipaololuigi95@gmail.com<">
