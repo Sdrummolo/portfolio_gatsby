@@ -50,10 +50,10 @@ const StyledDiv = styled(animated.div)`
   }
 `
 
-const ScrollUpButton = ({ scrollUp }) => {
+const ScrollUpButton = ({ scrollUp, isOpen }) => {
   const ButtonSpring = useSpring({
     to: {
-      opacity: scrollUp ? 1 : 0,
+      opacity: scrollUp && !isOpen ? 1 : 0,
     },
   })
   return (
@@ -67,6 +67,7 @@ const ScrollUpButton = ({ scrollUp }) => {
 
 ScrollUpButton.propTypes = {
   scrollUp: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 }
 
 export default ScrollUpButton
