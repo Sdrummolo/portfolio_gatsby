@@ -24,8 +24,8 @@ const StyledDiv = styled(animated.div)`
   @media (max-width: 768px) {
     bottom: 20px;
     right: 20px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
 
   &:hover {

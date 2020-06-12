@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { useSpring, animated, config } from "react-spring"
+import { HamburgerCollapse } from "react-animated-burgers"
 
 // Components
-import NavLogoMobile from "../UI/NavLogoMobile"
-import BurgerMenu from "../UI/BurgerMenu"
+import NavLogo from "../UI/NavLogo"
 import MobileUL from "../layout/MobileUL"
 
 const StyledNav = styled(animated.nav)`
@@ -42,8 +42,15 @@ const MobileNavbar = ({ isOpen, toggleOpen }) => {
   return (
     <StyledNav style={MobileNavSpring}>
       <NavContainer>
-        <NavLogoMobile />
-        <BurgerMenu toggleOpen={toggleOpen} isOpen={isOpen} />
+        <NavLogo />
+        <HamburgerCollapse
+          isActive={isOpen}
+          onClick={toggleOpen}
+          buttonColor="transparent"
+          barColor="#188BC9"
+          buttonWidth={37}
+          style={{ outline: "none", zIndex: 100 }}
+        />
         <MobileUL toggleOpen={toggleOpen} isOpen={isOpen} />
       </NavContainer>
     </StyledNav>

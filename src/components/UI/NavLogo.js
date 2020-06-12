@@ -1,28 +1,21 @@
 import React from "react"
-import Img from "gatsby-image"
 import styled from "styled-components"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { Link } from "gatsby"
+import logo from "../../images/dp_lighblue_textright_sm.png"
 
-const StyledLogo = styled(Img)``
+const StyledLogo = styled.img`
+  z-index: 100;
+  max-width: 10rem;
+
+  @media (max-width: 768px) {
+    max-width: 7rem;
+  }
+`
 
 const NavLogo = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "dp_lighblue_textright_sm.png" }) {
-        childImageSharp {
-          fixed(height: 50) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
-        }
-      }
-    }
-  `)
-
-  const image = data.file.childImageSharp.fixed
-
   return (
     <Link to="#header">
-      <StyledLogo fixed={image}>Navlogo</StyledLogo>
+      <StyledLogo src={logo} />
     </Link>
   )
 }
