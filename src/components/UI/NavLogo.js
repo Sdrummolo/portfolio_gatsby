@@ -5,7 +5,7 @@ import logo from "../../images/dp_lighblue_textright_sm.png"
 
 const StyledLogo = styled.img`
   z-index: 100;
-  max-width: 10rem;
+  max-width: 8rem;
 
   @media (max-width: 768px) {
     max-width: 5rem;
