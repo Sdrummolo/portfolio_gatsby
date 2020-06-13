@@ -11,6 +11,7 @@ import About from "../components/layout/About"
 import Portfolio from "../components/layout/Portfolio"
 import Contact from "../components/layout/Contact"
 import ScrollUpButton from "../components/UI/ScrollUpButton"
+import Form from "../components/layout/Form"
 
 const IndexPage = () => {
   const [isMobile, setIsMobile] = useState(null)
@@ -59,6 +60,7 @@ const IndexPage = () => {
         <About />
         <Portfolio />
         <Contact />
+        <Form />
       </Container>
       <ScrollUpButton scrollUp={scrollUp} isOpen={isOpen} />
     </Layout>
