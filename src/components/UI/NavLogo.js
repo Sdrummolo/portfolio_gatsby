@@ -8,7 +8,7 @@ const StyledLogo = styled.img`
   max-width: 10rem;
 
   @media (max-width: 768px) {
-    max-width: 7rem;
+    max-width: 5rem;
   }
 `
 

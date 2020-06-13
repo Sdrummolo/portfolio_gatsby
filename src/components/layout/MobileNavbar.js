@@ -48,7 +48,7 @@ const MobileNavbar = ({ isOpen, toggleOpen }) => {
           onClick={toggleOpen}
           buttonColor="transparent"
           barColor="#188BC9"
-          buttonWidth={37}
+          buttonWidth={24}
           style={{ outline: "none", zIndex: 100 }}
         />
         <MobileUL toggleOpen={toggleOpen} isOpen={isOpen} />

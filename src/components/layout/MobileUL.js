@@ -19,7 +19,6 @@ const MobileULContainer = styled(animated.div)`
     li {
       padding: 20px 0;
       text-align: center;
-      /* box-sizing: border-box; */
 
       a {
         text-transform: uppercase;
