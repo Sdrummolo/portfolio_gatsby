@@ -12,7 +12,7 @@ const AnimatedButton = animated(Button)
 
 const HeaderContainer = styled.div`
   /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
