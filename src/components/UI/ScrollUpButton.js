@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { useSpring, animated } from "react-spring"
 import PropTypes from "prop-types"
 import arrow from "../../images/arrow_down.svg"
 
-const StyledDiv = styled(animated.div)`
+const StyledDiv = styled.div`
+  display: ${({ isOpen }) => (isOpen ? "none" : "flex")};
   position: fixed;
   bottom: 40px;
   right: 20px;
@@ -14,7 +14,6 @@ const StyledDiv = styled(animated.div)`
   z-index: 100;
   height: 40px;
   width: 40px;
-  display: flex;
   align-items: center;
   justify-items: center;
   box-shadow: 0px 8px 15px rgba(98, 98, 98, 0.3);
@@ -50,15 +49,10 @@ const StyledDiv = styled(animated.div)`
   }
 `
 
-const ScrollUpButton = ({ scrollUp, isOpen }) => {
-  const ButtonSpring = useSpring({
-    to: {
-      opacity: scrollUp && !isOpen ? 1 : 0,
-    },
-  })
+const ScrollUpButton = ({ isOpen }) => {
   return (
     <Link to="#header">
-      <StyledDiv style={ButtonSpring}>
+      <StyledDiv isOpen={isOpen}>
         <img src={arrow} alt="" />
       </StyledDiv>
     </Link>
@@ -66,7 +60,6 @@ const ScrollUpButton = ({ scrollUp, isOpen }) => {
 }
 
 ScrollUpButton.propTypes = {
-  scrollUp: PropTypes.bool.isRequired,
   isOpen: PropTypes.bool.isRequired,
 }
 

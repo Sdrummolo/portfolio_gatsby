@@ -60,7 +60,7 @@ const IndexPage = () => {
         <Portfolio />
         <Contact />
       </Container>
-      <ScrollUpButton scrollUp={scrollUp} isOpen={isOpen} />
+      {scrollUp ? <ScrollUpButton isOpen={isOpen} /> : null}
     </Layout>
   )
 }
